@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e31d4b1b2e177daa98c1c8981966b78cf1c585f43a20e7dbe691390cb6edcced
+  sha256: 906f1902ef5cb9485dc2fc074cc738616ae29b80e7fb00f6a387546d9e074c8c
 
 build:
   number: 0
@@ -22,12 +22,13 @@ requirements:
     - pip
     - setuptools
   run:
-    - future
-    - dynesty
     - corner
-    - numpy >=1.9
-    - matplotlib >=2.0
     - deepdish
+    - dill
+    - dynesty
+    - future
+    - matplotlib >=2.0
+    - numpy >=1.9
     - pandas
     - scipy
 
