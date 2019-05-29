@@ -22,12 +22,13 @@ requirements:
     - pip
     - setuptools
   run:
-    - future
-    - dynesty
     - corner
-    - numpy >=1.9
-    - matplotlib >=2.0
     - deepdish
+    - dill
+    - dynesty
+    - future
+    - matplotlib >=2.0
+    - numpy >=1.9
     - pandas
     - scipy
 
