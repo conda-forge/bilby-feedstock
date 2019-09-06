@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbc6c6d28cd0885baf1c9a4d061f8535648af64e9bd3e2666154d1dbcbe73ef4
+  sha256: 2f52a8161ebf3bf988f70f8ec2830376b62b5fa8accdf12c0e57ad82f472c16a
 
 build:
   number: 0
