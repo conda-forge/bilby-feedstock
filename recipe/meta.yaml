@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "0.5.7" %}
+{% set version = "0.5.8" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,14 +7,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d9a41f9831224463ca5b3d64810a03df2e336cbd403eeece715e924505484716
+  sha256: d74dab14e531096a62d825f3a44624d9431579ad6e5f753fbea1da2ad870f8a2
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
-    - bilby_plot=cli_bilby.plot_multiple_posteriors:main
+    - bilby_plot = cli_bilby.plot_multiple_posteriors:main
+    - bilby_result = cli_bilby.bilby_result:main
+    - bilby_convert_resume = cli_bilby.resume:main
 
 requirements:
   host:
@@ -31,15 +33,21 @@ requirements:
     - numpy >=1.9
     - pandas
     - scipy
+    - tqdm
 
 test:
   commands:
     - setx MPLBACKEND "Agg"  # [win]
     - export MPLBACKEND="Agg"  # [unix]
     - bilby_plot --help
+    - bilby_result --help
+    - bilby_convert_resume --help
     - python -c "import bilby"
     - python -c "import bilby.core"
+    - python -c "import bilby.core.sampler"
     - python -c "import bilby.gw"
+    - python -c "import bilby.gw.detector"
+    - python -c "import bilby.gw.sampler"
     - python -c "import bilby.hyper"
     - python -c "import cli_bilby"
 
@@ -47,7 +55,7 @@ about:
   home: https://git.ligo.org/lscsoft/bilby
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.md'
+  license_file: LICENSE.md
   summary: A user-friendly Bayesian inference library
 
 extra:
