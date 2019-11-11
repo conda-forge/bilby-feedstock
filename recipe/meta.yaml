@@ -10,7 +10,7 @@ source:
   sha256: d72f2a6db0e8d89dadbb8ea32734bb22d65cf7762d426b14e4686ecc2a6b2502
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
@@ -32,6 +32,7 @@ requirements:
     - matplotlib >=2.0
     - numpy >=1.9
     - pandas
+    - python
     - scipy
     - tqdm
 
