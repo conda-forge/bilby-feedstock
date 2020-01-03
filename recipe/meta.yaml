@@ -52,9 +52,12 @@ test:
     - bilby.hyper
     - cli_bilby
   commands:
+    # check entry points
     - bilby_plot --help
     - bilby_result --help
     - bilby_convert_resume --help
+    # check PSD from file works (validates data files)
+    - python -c "from bilby.gw.detector import PowerSpectralDensity; print(PowerSpectralDensity.from_aligo().psd_array)"
 
 about:
   home: "https://git.ligo.org/lscsoft/bilby"
