@@ -21,11 +21,10 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.5
     - setuptools
   run:
     - corner
-    - deepdish
     - dill
     - dynesty >=1.0.0
     - emcee
@@ -33,7 +32,7 @@ requirements:
     - matplotlib-base >=2.0
     - numpy >=1.9
     - pandas
-    - python
+    - python >=3.5
     - scipy
     - tqdm
 
