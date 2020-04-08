@@ -1,18 +1,18 @@
 {% set name = "bilby" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 71fddb8965a087dd1f40b424e2cfca9e083f193a512e809a29dea67f00ee5bcc
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 54df052115fa381694bc801f39a28928b0a06853b98994b3cd898940a1f5fc4b
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - bilby_convert_resume = cli_bilby.resume:main
     - bilby_plot = cli_bilby.plot_multiple_posteriors:main
@@ -59,13 +59,13 @@ test:
     - python -c "from bilby.gw.detector import PowerSpectralDensity; print(PowerSpectralDensity.from_aligo().psd_array)"
 
 about:
-  home: "https://git.ligo.org/lscsoft/bilby"
-  dev_url: "https://git.ligo.org/lscsoft/bilby"
-  doc_url: "https://lscsoft.docs.ligo.org/bilby/"
-  license: "MIT"
-  license_family: "MIT"
-  license_file: "LICENSE.md"
-  summary: "A user-friendly Bayesian inference library"
+  home: https://git.ligo.org/lscsoft/bilby
+  dev_url: https://git.ligo.org/lscsoft/bilby
+  doc_url: https://lscsoft.docs.ligo.org/bilby/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: A user-friendly Bayesian inference library
 
 extra:
   recipe-maintainers:
