@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "0.6.7" %}
+{% set version = "0.6.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d24e6e4a534b394c85c95521ce418e15fe61d238ad786eec5d7945f68684e7f2
+  sha256: 4994a77e06b2b4d807adc6f77bf929e72846761eb900d996e3c609ffef3703dc
 
 build:
   number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - bilby_convert_resume = cli_bilby.resume:main
     - bilby_plot = cli_bilby.plot_multiple_posteriors:main
     - bilby_result = cli_bilby.bilby_result:main
 
@@ -54,7 +53,6 @@ test:
     # check entry points
     - bilby_plot --help
     - bilby_result --help
-    - bilby_convert_resume --help
     # check PSD from file works (validates data files)
     - python -c "from bilby.gw.detector import PowerSpectralDensity; print(PowerSpectralDensity.from_aligo().psd_array)"
 
