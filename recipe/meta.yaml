@@ -14,7 +14,6 @@ build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - bilby_convert_resume = cli_bilby.resume:main
     - bilby_plot = cli_bilby.plot_multiple_posteriors:main
     - bilby_result = cli_bilby.bilby_result:main
 
@@ -54,7 +53,6 @@ test:
     # check entry points
     - bilby_plot --help
     - bilby_result --help
-    - bilby_convert_resume --help
     # check PSD from file works (validates data files)
     - python -c "from bilby.gw.detector import PowerSpectralDensity; print(PowerSpectralDensity.from_aligo().psd_array)"
 
