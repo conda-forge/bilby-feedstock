@@ -5,7 +5,7 @@ Home: https://git.ligo.org/lscsoft/bilby
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A user-friendly Bayesian inference library
 
