@@ -40,6 +40,7 @@ requirements:
 test:
   requires:
     - gwpy
+    - pip
     - python-lal
     - python-lalsimulation
   imports:
@@ -52,6 +53,8 @@ test:
     - bilby.hyper
     - cli_bilby
   commands:
+    # check requirements
+    - python -m pip check
     # check entry points
     - bilby_plot --help
     - bilby_result --help
