@@ -25,14 +25,16 @@ requirements:
   run:
     - corner
     - dill
-    - dynesty >=1.0.0
+    - dynesty
     - emcee
-    - future
+    - h5py
     - matplotlib-base >=2.0
-    - numpy >=1.9
+    - mock
+    - numpy <1.20
     - pandas
     - python >=3.5
-    - scipy
+    - scipy >=0.16
+    - pytables
     - tqdm
 
 test:
