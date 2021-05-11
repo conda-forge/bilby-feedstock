@@ -28,13 +28,12 @@ requirements:
     - dynesty
     - emcee
     - h5py
-    - matplotlib-base >=2.0
+    - matplotlib-base >=2.1
     - mock
-    - numpy <1.20
+    - numpy
     - pandas
     - python >=3.5
     - scipy >=0.16
-    - pytables
     - tqdm
 
 test:
