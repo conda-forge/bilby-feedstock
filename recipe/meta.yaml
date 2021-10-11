@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "1.1.3" %}
+{% set version = "1.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0b90491185723dfe5a741ffceea0dbeb84ef24183200411abfc451e813949dd4
+  sha256: db6e3ab8da58122e21f882ac3d1c4ffcb601cb67403b6a2c365dd994991cfa42
 
 build:
   number: 0
@@ -20,20 +20,23 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
     - setuptools
   run:
+    - astropy
+    - attrs
     - corner
     - dill
-    - dynesty
+    - dynesty <1.1
     - emcee
     - h5py
     - matplotlib-base >=2.1
     - mock
     - numpy
     - pandas
-    - python >=3.5
-    - scipy >=0.16
+    - pytables
+    - python >=3.7
+    - scipy >=1.5
     - tqdm
 
 test:
