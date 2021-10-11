@@ -20,20 +20,22 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.5
+    - python >=3.7
     - setuptools
   run:
+    - astropy
+    - attrs
     - corner
     - dill
-    - dynesty
+    - dynesty <1.1
     - emcee
     - h5py
     - matplotlib-base >=2.1
     - mock
     - numpy
     - pandas
-    - python >=3.5
-    - scipy >=0.16
+    - python >=3.7
+    - scipy >=1.5
     - tqdm
 
 test:
