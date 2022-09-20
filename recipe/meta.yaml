@@ -31,7 +31,6 @@ requirements:
     - emcee
     - h5py
     - matplotlib-base >=2.1
-    - mock
     - numpy
     - pandas
     - pytables
