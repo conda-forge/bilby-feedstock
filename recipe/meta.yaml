@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3582356c9f5ead6ef67b1beceddd55e35509b1da5634fd04f100bfff0567bbba
+  sha256: 0c498226440c590aa003ce215fa97eeba72e8961c4e229c300415e525d3350f4
 
 build:
   number: 0
@@ -31,7 +31,6 @@ requirements:
     - emcee
     - h5py
     - matplotlib-base >=2.1
-    - mock
     - numpy
     - pandas
     - pytables
@@ -75,4 +74,5 @@ about:
 extra:
   recipe-maintainers:
     - duncanmmacleod
+    - ColmTalbot
     - GregoryAshton
