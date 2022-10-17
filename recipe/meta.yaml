@@ -10,7 +10,7 @@ source:
   sha256: 0c498226440c590aa003ce215fa97eeba72e8961c4e229c300415e525d3350f4
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,7 +21,8 @@ requirements:
   host:
     - pip
     - python >=3.7
-    - setuptools
+    - setuptools >=42
+    - setuptools-scm >=3.4.3
   run:
     - astropy
     - attrs
@@ -55,7 +56,8 @@ test:
     - cli_bilby
   commands:
     # check requirements
-    - python -m pip check
+    - python -m pip check bilby
+    - python -m pip show bilby
     # check entry points
     - bilby_plot --help
     - bilby_result --help
