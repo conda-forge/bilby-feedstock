@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "1.2.1" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0c498226440c590aa003ce215fa97eeba72e8961c4e229c300415e525d3350f4
+  sha256: 6e639be0be316aaac672d38e5ca35a512df74f25fce02cebcbb9d96a99a2e98b
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -26,6 +26,7 @@ requirements:
   run:
     - astropy
     - attrs
+    - bilby.cython
     - corner
     - dill
     - dynesty <1.1
