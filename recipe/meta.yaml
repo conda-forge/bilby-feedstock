@@ -26,6 +26,7 @@ requirements:
   run:
     - astropy
     - attrs
+    - bilby.cython
     - corner
     - dill
     - dynesty <1.1
