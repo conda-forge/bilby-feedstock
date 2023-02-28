@@ -26,10 +26,10 @@ requirements:
   run:
     - astropy
     - attrs
-    - bilby.cython
+    - bilby.cython >=0.3.0
     - corner
     - dill
-    - dynesty >=2
+    - dynesty >=2.0.1
     - emcee
     - h5py
     - matplotlib-base >=2.1
