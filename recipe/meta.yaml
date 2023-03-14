@@ -34,6 +34,7 @@ requirements:
     - h5py
     - matplotlib-base >=2.1
     - numpy
+    - packaging
     - pandas
     - pytables
     - python >=3.8
