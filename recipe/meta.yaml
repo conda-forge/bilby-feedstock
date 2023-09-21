@@ -32,7 +32,7 @@ requirements:
     - dynesty >=2.0.1
     - emcee
     - h5py
-    - matplotlib-base >=2.1
+    - matplotlib-base <3.8.0
     - numpy
     - packaging
     - pandas
