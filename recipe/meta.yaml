@@ -38,6 +38,7 @@ requirements:
     - pandas
     - pytables
     - python >=3.8
+    - pytorch
     - scipy >=1.5
     - tqdm
 
