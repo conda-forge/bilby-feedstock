@@ -47,7 +47,6 @@ test:
     - pip
     - python-lal
     - python-lalsimulation
-    - pytorch
   imports:
     - bilby
     - bilby.core
