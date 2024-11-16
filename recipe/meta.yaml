@@ -1,12 +1,13 @@
 {% set name = "bilby" %}
 {% set version = "2.4.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2d20edf671354323bb6a53ee12b1989ea7aeaabf754aaa0588a70763d7e8e077
 
 build:
@@ -20,7 +21,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=42
     - setuptools-scm >=3.4.3
   run:
@@ -37,12 +38,13 @@ requirements:
     - packaging
     - pandas
     - pytables
-    - python >=3.9
+    - python >={{ python_min }}
     - scipy >=1.5
     - tqdm
 
 test:
   requires:
+    - python {{ python_min }}
     - gwpy
     - pip
     - python-lal
