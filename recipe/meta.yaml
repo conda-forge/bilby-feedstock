@@ -11,7 +11,7 @@ source:
   sha256: 2d20edf671354323bb6a53ee12b1989ea7aeaabf754aaa0588a70763d7e8e077
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -25,7 +25,7 @@ requirements:
     - setuptools >=42
     - setuptools-scm >=3.4.3
   run:
-    - astropy
+    - astropy-base
     - attrs
     - bilby.cython >=0.3.0
     - corner
