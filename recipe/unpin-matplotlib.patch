@@ -1,0 +1,13 @@
+diff --git a/requirements.txt b/requirements.txt
+index f94fbe7d..73c9d23b 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -3,7 +3,7 @@ dynesty>=2.0.1
+ emcee
+ corner
+ numpy
+-matplotlib<3.8.0
++matplotlib
+ scipy>=1.5
+ pandas
+ dill
