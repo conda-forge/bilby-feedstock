@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 832855233331592a23084ad0cec3673ffc845433517c77ef4b4513abbb2e8085
+  patches:
+    - unpin-matplotlib.patch
 
 build:
   number: 1
@@ -32,7 +34,7 @@ requirements:
     - dynesty >=2.0.1
     - emcee
     - h5py
-    - matplotlib-base <3.8.0
+    - matplotlib-base
     - numpy
     - packaging
     - pandas
@@ -40,6 +42,8 @@ requirements:
     - python >={{ python_min }}
     - scipy >=1.5
     - tqdm
+  run_constrained:
+    - gwpy >=3.0.11
 
 test:
   requires:
