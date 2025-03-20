@@ -1,5 +1,5 @@
 {% set name = "bilby" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d20edf671354323bb6a53ee12b1989ea7aeaabf754aaa0588a70763d7e8e077
+  sha256: 532bfccac881c971003f945e511b11ca38ef8e6eb4d101fde9bc49e849ae3197
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
