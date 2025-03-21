@@ -69,9 +69,9 @@ test:
     - python -c "from bilby.gw.detector import PowerSpectralDensity; print(PowerSpectralDensity.from_aligo().psd_array)"
 
 about:
-  home: https://git.ligo.org/lscsoft/bilby
-  dev_url: https://git.ligo.org/lscsoft/bilby
-  doc_url: https://lscsoft.docs.ligo.org/bilby/
+  home: https://github.com/bilby-dev/bilby
+  dev_url: https://github.com/bilby-dev/bilby
+  doc_url: https://bilby-dev.github.io/bilby/
   license: MIT
   license_family: MIT
   license_file: LICENSE.md
