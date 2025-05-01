@@ -30,7 +30,7 @@ requirements:
     - bilby.cython >=0.3.0
     - corner
     - dill
-    - dynesty >=2.0.1
+    - dynesty >=2.0.1,<2.2
     - emcee
     - h5py
     - matplotlib-base
