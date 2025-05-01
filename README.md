@@ -3,15 +3,15 @@ About bilby-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bilby-feedstock/blob/main/LICENSE.txt)
 
-Home: https://git.ligo.org/lscsoft/bilby
+Home: https://github.com/bilby-dev/bilby
 
 Package license: MIT
 
 Summary: A user-friendly Bayesian inference library
 
-Development: https://git.ligo.org/lscsoft/bilby
+Development: https://github.com/bilby-dev/bilby
 
-Documentation: https://lscsoft.docs.ligo.org/bilby/
+Documentation: https://bilby-dev.github.io/bilby/
 
 Current build status
 ====================
