@@ -150,4 +150,5 @@ Feedstock Maintainers
 * [@ColmTalbot](https://github.com/ColmTalbot/)
 * [@GregoryAshton](https://github.com/GregoryAshton/)
 * [@duncanmmacleod](https://github.com/duncanmmacleod/)
+* [@mj-will](https://github.com/mj-will/)
 
