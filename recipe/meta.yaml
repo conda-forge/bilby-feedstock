@@ -11,7 +11,7 @@ source:
   sha256: 2a6b63d3cc6ee9fa0ef78b15ce61acd4cdbd351599d2d3d891e40015fb9b1e0a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -37,7 +37,6 @@ requirements:
     - numpy
     - packaging
     - pandas
-    - pytables
     - python >={{ python_min }}
     - scipy >=1.5
     - tqdm
