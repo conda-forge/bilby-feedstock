@@ -33,7 +33,7 @@ requirements:
     - emcee
     - h5py
     - matplotlib-base
-    - numpy
+    - numpy <=2.4
     - packaging
     - pandas
     - python >={{ python_min }}
